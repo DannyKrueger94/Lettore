@@ -10,7 +10,7 @@
    Versione pubblicata: VERSION e APP_FILES li scrive da solo strumenti/pubblica.mjs.
    ======================================== */
 
-const VERSION = 'p-ba279db2c916';
+const VERSION = 'p-cf619118ee1d';
 const APP_CACHE = `app-${VERSION}`;
 const PDF_CACHE = 'spartiti-pdf';
 
