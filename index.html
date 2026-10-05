@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lettore Spartiti</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Spartiti">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <style>
+        html, body { margin: 0; background: #0f172a; color: #e2e8f0; font-family: -apple-system, system-ui, 'Segoe UI', Roboto, sans-serif; }
+        #blocco { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; }
+        #blocco[hidden] { display: none; }
+        #blocco form { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 14px; text-align: center; }
+        #blocco h1 { margin: 0 0 4px; font-size: 1.5rem; }
+        #blocco p { margin: 0; color: #94a3b8; }
+        #blocco input { font: 600 1.15rem/1.2 ui-monospace, Menlo, Consolas, monospace; letter-spacing: 0.06em; text-align: center; padding: 14px; border-radius: 12px; border: 1px solid #334155; background: #1e293b; color: inherit; }
+        #blocco button { padding: 14px; border: 0; border-radius: 12px; background: #7c3aed; color: #fff; font-size: 1rem; font-weight: 600; }
+        #blocco button:disabled { opacity: 0.6; }
+        #errore { color: #f87171; min-height: 1.4em; }
+    </style>
+    <script type="module" src="avvio.js"></script>
+</head>
+<body>
+    <!-- Schermata del codice: l'app vera è cifrata e compare solo sui dispositivi attivati -->
+    <section id="blocco" hidden>
+        <form id="attiva">
+            <h1>Lettore Spartiti</h1>
+            <p>Inserisci il codice di attivazione di questo dispositivo.</p>
+            <input id="codice" placeholder="XXXX-XXXX-XXXX-XXXX-XXXX-XXXX" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" required>
+            <button id="attivaBtn" type="submit">Attiva</button>
+            <p id="errore" role="alert"></p>
+        </form>
+    </section>
+</body>
+</html>
